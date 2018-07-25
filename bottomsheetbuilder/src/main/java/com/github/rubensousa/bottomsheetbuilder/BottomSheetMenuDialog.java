@@ -160,18 +160,14 @@ public class BottomSheetMenuDialog extends BottomSheetDialog implements BottomSh
 
     @Override
     public void onBottomSheetItemClick(MenuItem item) {
-        if (!mClicked) {
-
-            if (mBehavior != null) {
-                mBehavior.setState(BottomSheetBehavior.STATE_HIDDEN);
-            }
+      
 
             if (mClickListener != null) {
                 mClickListener.onBottomSheetItemClick(item);
             }
 
-            mClicked = true;
-        }
+           
+        
     }
 
     private BottomSheetBehavior.BottomSheetCallback mBottomSheetCallback
